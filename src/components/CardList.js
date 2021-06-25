@@ -1,7 +1,9 @@
 import Card from "./Card";
 
-const CardList = ({ cats }) => {
+const CardList = ({ cats, isLoading }) => {
+
   return (
+    isLoading ? <h3 className="text-6xl font-bold">Loading...</h3> :
     <div className="flex flex-wrap justify-center">
       {cats.map((cat) => (
         <Card
